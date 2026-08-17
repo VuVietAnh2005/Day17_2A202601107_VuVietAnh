@@ -5,22 +5,22 @@
 - Cases: **11**
 - Passed: **11/11**
 - Evidence hit rate: **100.0%**
-- Average retrieval latency: **1006.2 ms**
+- Average retrieval latency: **1436.6 ms**
 - Average token reduction vs full source context: **14.2%**
 
 | Case | Layer | Pass | Latency ms | Retrieved tokens | Token reduction | Missing / Error |
 | --- | --- | --- | ---: | ---: | ---: | --- |
-| E01 | short_term | PASS | 0.0 | 133 | 0.0% |  |
-| E06 | semantic | PASS | 393.1 | 148 | 67.8% |  |
-| E09 | long_term | PASS | 2200.3 | 716 | 0.0% |  |
-| E10 | short_term | PASS | 0.2 | 195 | 0.0% |  |
-| E02 | long_term | PASS | 1724.0 | 1461 | 0.0% |  |
-| E03 | long_term | PASS | 1519.5 | 1482 | 0.0% |  |
-| E04 | episodic | PASS | 246.5 | 248 | 0.0% |  |
-| E05 | episodic | PASS | 630.3 | 267 | 0.0% |  |
-| E07 | mixed | PASS | 2160.4 | 485 | 14.2% |  |
-| E11 | semantic | PASS | 344.3 | 146 | 74.2% |  |
-| E08 | long_term | PASS | 1849.8 | 1432 | 0.0% |  |
+| E01 | short_term | PASS | 0.1 | 133 | 0.0% |  |
+| E06 | semantic | PASS | 598.7 | 148 | 67.8% |  |
+| E09 | long_term | PASS | 2131.0 | 727 | 0.0% |  |
+| E10 | short_term | PASS | 0.3 | 195 | 0.0% |  |
+| E02 | long_term | PASS | 3134.2 | 1458 | 0.0% |  |
+| E03 | long_term | PASS | 1869.8 | 1478 | 0.0% |  |
+| E04 | episodic | PASS | 712.4 | 615 | 0.0% |  |
+| E05 | episodic | PASS | 1285.0 | 636 | 0.0% |  |
+| E07 | mixed | PASS | 2126.6 | 485 | 14.2% |  |
+| E11 | semantic | PASS | 358.7 | 146 | 74.2% |  |
+| E08 | long_term | PASS | 3586.2 | 1435 | 0.0% |  |
 
 ## Evidence excerpts
 
@@ -50,11 +50,11 @@
 
 ### E04 - episodic
 
-`EPISODE: Cap nhat moi: voi du an cong ty BLUEBIRD-42, backend bat buoc dung TypeScript voi NestJS; khong dung Python cho backend du an nay. Preference Python van dung cho demo ca nhan ORCHI EPISODE: Voi demo ca nhan cua Minh, ngon ngu uu tien la gi? EPISODE: Ten du an ca nhan cua toi la ORCHID-27. Toi thich Python va khong thich Java. Khi giai thich code, hay dung vi du ngan. EPISODE: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline. EPISODE: TODO: hoan thanh benchmark report truoc thu Sau luc 16:00. Day la open loop LAB-REPORT-1600. EPISODE: Hom nay toi debug async HTTP. Toi da thu tang timeout len 60s nhung van fail. EPISODE:`
+`EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Minh dang chuan bi tu on lai phan async cua Python vi tuan sau co bai kiem tra nho, ma minh thi hoc kieu de vao dau lai de troi ra lam neu chi doc chu suong. Neu lat nua ban phai g EPISODE: Minh dang viet mot cai note tong ket ngan de tuan sau trinh bay cho ca nhom nghe ve cach minh phan biet giua viec ca nhan va viec o cong ty, vi may ban trong nhom hay bi lan lon. D EPISODE: Minh dang lam kiem ke lai mo hinh cac du an backend de bao cao, ma minh rat so cai vu bi gan nham du an cua nguoi khac vao ho so cua minh, chuyen do tung xay ra roi nen lan nay min EPISODE: Minh dang ngoi mot minh viet cho xong cai ham`
 
 ### E05 - episodic
 
-`EPISODE: Cap nhat moi: voi du an cong ty BLUEBIRD-42, backend bat buoc dung TypeScript voi NestJS; khong dung Python cho backend du an nay. Preference Python van dung cho demo ca nhan ORCHI EPISODE: Voi demo ca nhan cua Minh, ngon ngu uu tien la gi? EPISODE: Ten du an ca nhan cua toi la ORCHID-27. Toi thich Python va khong thich Java. Khi giai thich code, hay dung vi du ngan. EPISODE: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline. EPISODE: TODO: hoan thanh benchmark report truoc thu Sau luc 16:00. Day la open loop LAB-REPORT-1600. EPISODE: Hom nay toi debug async HTTP. Toi da thu tang timeout len 60s nhung van fail. EPISODE:`
+`EPISODE: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline. EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Backend cua BLUEBIRD-42 bat buoc dung stack gi? EPISODE: Minh dang chuan bi tu on lai phan async cua Python vi tuan sau co bai kiem tra nho, ma minh thi hoc kieu de vao dau lai de troi ra lam neu chi doc chu suong. Neu lat nua ban phai g EPISODE: Minh dang viet mot cai note tong ket ngan de tuan sau trinh bay cho ca nhom nghe ve cach minh phan biet giua viec ca nhan va viec o cong ty, vi may ban trong nhom hay bi lan lon. D EPISODE: Minh dang lam kiem ke lai mo hinh cac du an backend de`
 
 ### E07 - mixed
 

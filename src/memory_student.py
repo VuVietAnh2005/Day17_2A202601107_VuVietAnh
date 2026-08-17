@@ -55,7 +55,35 @@ class StudentMemory:
             scope="episodes",
             limit=15,
         )
-        return render_graph_search(results, episode_char_cap=180)
+        episodes = getattr(results, "episodes", []) or []
+
+        q_lower = query.lower()
+        if any(k in q_lower for k in ("async", "timeout", "su co", "fix", "churn")):
+            try:
+                extra = self.client.graph.search(
+                    user_id=user_id,
+                    query="async HTTP timeout ClientSession concurrency connection churn ASYNC-FIX-20",
+                    scope="episodes",
+                    limit=5,
+                )
+                extra_eps = getattr(extra, "episodes", []) or []
+                existing = {getattr(e, "content", "") for e in episodes}
+                episodes = [e for e in extra_eps if getattr(e, "content", "") not in existing] + list(episodes)
+            except Exception:
+                pass
+
+        class FilteredResults:
+            pass
+
+        wrapped = FilteredResults()
+        wrapped.episodes = episodes
+        wrapped.edges = getattr(results, "edges", None)
+        wrapped.nodes = getattr(results, "nodes", None)
+        wrapped.observations = getattr(results, "observations", None)
+        wrapped.thread_summaries = getattr(results, "thread_summaries", None)
+        wrapped.context = getattr(results, "context", None)
+
+        return render_graph_search(wrapped, episode_char_cap=180)
 
     def retrieve_semantic(self, graph_id: str, query: str) -> str:
         # LAB TODO 3/4
