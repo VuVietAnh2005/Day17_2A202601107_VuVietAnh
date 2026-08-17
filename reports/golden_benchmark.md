@@ -5,32 +5,32 @@
 - Cases: **20**
 - Passed: **20/20**
 - Evidence hit rate: **100.0%**
-- Average retrieval latency: **1493.8 ms**
+- Average retrieval latency: **1613.2 ms**
 - Average token reduction vs full source context: **6.3%**
 - Golden bonus: **10/10** (100% required)
 
 | Case | Layer | Pass | Latency ms | Retrieved tokens | Token reduction | Missing / Error |
 | --- | --- | --- | ---: | ---: | ---: | --- |
 | G01 | short_term | PASS | 0.2 | 227 | 0.0% |  |
-| G02 | short_term | PASS | 0.1 | 133 | 0.0% |  |
-| G08 | long_term | PASS | 2811.3 | 785 | 0.0% |  |
-| G09 | long_term | PASS | 1777.5 | 1477 | 0.0% |  |
-| G12 | semantic | PASS | 397.0 | 418 | 8.9% |  |
-| G14 | semantic | PASS | 255.8 | 270 | 30.2% |  |
-| G15 | semantic | PASS | 363.2 | 270 | 41.2% |  |
-| G19 | mixed | PASS | 2541.3 | 581 | 0.0% |  |
-| G03 | long_term | PASS | 1828.1 | 1478 | 0.0% |  |
-| G04 | long_term | PASS | 2118.1 | 1445 | 0.0% |  |
-| G05 | long_term | PASS | 3206.0 | 1471 | 0.0% |  |
-| G10 | episodic | PASS | 602.0 | 601 | 0.0% |  |
-| G11 | episodic | PASS | 546.3 | 632 | 0.0% |  |
-| G13 | semantic | PASS | 1600.2 | 416 | 26.4% |  |
-| G16 | mixed | PASS | 2238.6 | 581 | 0.0% |  |
-| G18 | mixed | PASS | 1120.8 | 500 | 11.5% |  |
-| G20 | mixed | PASS | 2755.2 | 831 | 0.0% |  |
-| G06 | long_term | PASS | 1672.3 | 1467 | 0.0% |  |
-| G07 | long_term | PASS | 2000.9 | 1469 | 0.0% |  |
-| G17 | mixed | PASS | 2041.4 | 581 | 8.1% |  |
+| G02 | short_term | PASS | 0.0 | 133 | 0.0% |  |
+| G08 | long_term | PASS | 4161.0 | 788 | 0.0% |  |
+| G09 | long_term | PASS | 1714.3 | 1477 | 0.0% |  |
+| G12 | semantic | PASS | 261.2 | 418 | 8.9% |  |
+| G14 | semantic | PASS | 272.4 | 270 | 30.2% |  |
+| G15 | semantic | PASS | 362.8 | 270 | 41.2% |  |
+| G19 | mixed | PASS | 2342.9 | 581 | 0.0% |  |
+| G03 | long_term | PASS | 2910.8 | 1476 | 0.0% |  |
+| G04 | long_term | PASS | 2050.7 | 1445 | 0.0% |  |
+| G05 | long_term | PASS | 2697.3 | 1471 | 0.0% |  |
+| G10 | episodic | PASS | 710.3 | 601 | 0.0% |  |
+| G11 | episodic | PASS | 602.2 | 632 | 0.0% |  |
+| G13 | semantic | PASS | 915.7 | 416 | 26.4% |  |
+| G16 | mixed | PASS | 2562.9 | 581 | 0.0% |  |
+| G18 | mixed | PASS | 1211.0 | 500 | 11.5% |  |
+| G20 | mixed | PASS | 2869.6 | 831 | 0.0% |  |
+| G06 | long_term | PASS | 1829.9 | 1467 | 0.0% |  |
+| G07 | long_term | PASS | 1950.6 | 1469 | 0.0% |  |
+| G17 | mixed | PASS | 2838.4 | 581 | 8.1% |  |
 
 ## Evidence excerpts
 
@@ -44,7 +44,7 @@
 
 ### G08 - long_term
 
-`<USER_SUMMARY> Lan's project is LOTUS-88, with a primary focus on Java and Spring Boot. Python is not used for backend development in this project. </USER_SUMMARY>  <EPISODES> Episodes are source message or document excerpts shown in selection order.   - Created At: 2026-08-01 11:00:00     Source: message     Content: [user] {   "user_id": "lan-lab17",   "first_name": "Lan",   "last_name": "Tran",   "user_alias": "Lan Tran" }: Toi la Lan. Du an cua toi la LOTUS-88. Toi uu tien Java va Spring Boot, va khong dung Python trong vi du backend.   - Created At: 2026-08-01 11:00:20     Source: message     Content: Lab Assistant (assistant): Da hieu: LOTUS-88, Java + Spring Boot cho backend examples.`
+`<USER_SUMMARY> Lan's project is LOTUS-88, with a primary focus on Java and Spring Boot. Python is not used for backend development in this project. </USER_SUMMARY>  <EPISODES> Episodes are source message or document excerpts shown in selection order.   - Created At: 2026-08-17 05:28:24     Source: message     Content: [user] {   "user_id": "lan-lab17",   "first_name": "Lan",   "last_name": "Tran",   "user_alias": "Evaluation User" }: Minh la Lan, minh dang muon them retry cho phan goi payment trong san pham cua minh va minh muon vi du code hop voi dung stack ma minh dang dung chu dung dua cho minh vi du cua ngon ngu khac. Ban gy y gium minh: dua theo backend ma minh da chon cho san pham cua `
 
 ### G09 - long_term
 
@@ -64,7 +64,7 @@
 
 ### G19 - mixed
 
-`<LONG_TERM> <USER_SUMMARY> Lan's project is LOTUS-88, with a primary focus on Java and Spring Boot. Python is not used for backend development in this project. </USER_SUMMARY>  <EPISODES> Episodes are source message or document excerpts shown in selection order.   - Created At: 2026-08-17 05:28:19     Source: message     Content: [user] {   "user_id": "lan-lab17",   "first_name": "Lan",   "last_name": "Tran",   "user_alias": "Evaluation User" }: Chao ban, minh la Lan day. Minh dang len ke hoach kien truc cho san pham rieng cua minh va sap toi phai giai trinh voi doi tac ve lua chon cong nghe nen minh muon chac chan minh dang nho dung. Ban nhac lai gium minh xem: rieng cho san pham cua minh, `
+`<LONG_TERM> <USER_SUMMARY> Lan's project is LOTUS-88, with a primary focus on Java and Spring Boot. Python is not used for backend development in this project. </USER_SUMMARY>  <EPISODES> Episodes are source message or document excerpts shown in selection order.   - Created At: 2026-08-17 05:29:10     Source: message     Content: [user] {   "user_id": "lan-lab17",   "first_name": "Lan",   "last_name": "Tran",   "user_alias": "Evaluation User" }: Lan uu tien stack backend nao cho LOTUS-88?   - Created At: 2026-08-01 11:00:00     Source: message     Content: [user] {   "user_id": "lan-lab17",   "first_name": "Lan",   "last_name": "Tran",   "user_alias": "Lan Tran" }: Toi la Lan. Du an cua toi `
 
 ### G03 - long_term
 
@@ -80,11 +80,11 @@
 
 ### G10 - episodic
 
-`EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Minh dang ngoi mot minh viet cho xong cai ham retry cho POST payment de toi nay demo, va minh muon no vua dung dung ngon ngu ma minh thich khi lam viec ca nhan, vua bam sat dung po EPISODE: Minh dang lam kiem ke lai mo hinh cac du an backend de bao cao, ma minh rat so cai vu bi gan nham du an cua nguoi khac vao ho so cua minh, chuyen do tung xay ra roi nen lan nay min EPISODE: Tuan nay minh moi bi keo vao cai du an ben cong ty va sep hoi lien tuc ve chuyen chuan hoa backend, ma minh thi hoi mo ho vi truoc gio minh xai nhieu thu khac nhau cho project rien EPISODE: Ten du an ca nhan cua toi la ORCHID-27. Toi t`
+`EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Minh dang viet mot cai note tong ket ngan de tuan sau trinh bay cho ca nhom nghe ve cach minh phan biet giua viec ca nhan va viec o cong ty, vi may ban trong nhom hay bi lan lon. D EPISODE: Minh dang setup lai moi truong dev cho mot buoi ngoi code mot minh cuoi tuan nay, kieu khong co ai chung nhom, chi lam project rieng cua minh cho vui thoi. Truoc khi minh chon temp EPISODE: Minh dang ngoi mot minh viet cho xong cai ham retry cho POST payment de toi nay demo, va minh muon no vua dung dung ngon ngu ma minh thich khi lam viec ca nhan, vua bam sat dung po EPISODE: Tuan nay minh phai them chuc nang retry payme`
 
 ### G11 - episodic
 
-`EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Minh dang ngoi mot minh viet cho xong cai ham retry cho POST payment de toi nay demo, va minh muon no vua dung dung ngon ngu ma minh thich khi lam viec ca nhan, vua bam sat dung po EPISODE: Cap nhat moi: voi du an cong ty BLUEBIRD-42, backend bat buoc dung TypeScript voi NestJS; khong dung Python cho backend du an nay. Preference Python van dung cho demo ca nhan ORCHI EPISODE: Minh dang lam kiem ke lai mo hinh cac du an backend de bao cao, ma minh rat so cai vu bi gan nham du an cua nguoi khac vao ho so cua minh, chuyen do tung xay ra roi nen lan nay min EPISODE: Tuan nay minh moi bi keo vao cai du an ben co`
+`EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Minh dang viet mot cai note tong ket ngan de tuan sau trinh bay cho ca nhom nghe ve cach minh phan biet giua viec ca nhan va viec o cong ty, vi may ban trong nhom hay bi lan lon. D EPISODE: Minh dang setup lai moi truong dev cho mot buoi ngoi code mot minh cuoi tuan nay, kieu khong co ai chung nhom, chi lam project rieng cua minh cho vui thoi. Truoc khi minh chon temp EPISODE: Cap nhat moi: voi du an cong ty BLUEBIRD-42, backend bat buoc dung TypeScript voi NestJS; khong dung Python cho backend du an nay. Preference Python van dung cho demo ca nhan ORCHI EPISODE: Minh dang ngoi mot minh viet cho xong cai ham`
 
 ### G13 - semantic
 
@@ -96,7 +96,7 @@
 
 ### G18 - mixed
 
-`<EPISODIC> EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Da ghi nhan trajectory: increase timeout khong hieu qua; ClientSession + concurrency=20 giai quyet connection churn. EPISODE: Minh dang chuan bi tu on lai phan async cua Python vi tuan sau co bai kiem tra nho, ma minh thi hoc kieu de vao dau lai de troi ra lam neu chi doc chu suong. Neu lat nua ban phai g EPISODE: Cap nhat moi: voi du an cong ty BLUEBIRD-42, backend bat buoc dung TypeScript voi NestJS; khong dung Python cho backend du an nay. Preference Python van dung cho demo ca nhan ORCHI EPISODE: Voi demo ca nhan cua Minh, ngon ngu uu tien la gi? EPISODE: Minh dang lam kiem ke lai mo hinh cac `
+`<EPISODIC> EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Da ghi nhan trajectory: increase timeout khong hieu qua; ClientSession + concurrency=20 giai quyet connection churn. EPISODE: Minh dang viet mot cai note tong ket ngan de tuan sau trinh bay cho ca nhom nghe ve cach minh phan biet giua viec ca nhan va viec o cong ty, vi may ban trong nhom hay bi lan lon. D EPISODE: Hay chon huong dan code retry payment phu hop voi preference ca nhan cua Minh. EPISODE: Minh dang setup lai moi truong dev cho mot buoi ngoi code mot minh cuoi tuan nay, kieu khong co ai chung nhom, chi lam project rieng cua minh cho vui thoi. Truoc khi minh chon temp EPISODE: Cap nhat m`
 
 ### G20 - mixed
 
