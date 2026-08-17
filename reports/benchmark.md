@@ -5,22 +5,22 @@
 - Cases: **11**
 - Passed: **11/11**
 - Evidence hit rate: **100.0%**
-- Average retrieval latency: **1436.6 ms**
+- Average retrieval latency: **1393.5 ms**
 - Average token reduction vs full source context: **14.2%**
 
 | Case | Layer | Pass | Latency ms | Retrieved tokens | Token reduction | Missing / Error |
 | --- | --- | --- | ---: | ---: | ---: | --- |
 | E01 | short_term | PASS | 0.1 | 133 | 0.0% |  |
-| E06 | semantic | PASS | 598.7 | 148 | 67.8% |  |
-| E09 | long_term | PASS | 2131.0 | 727 | 0.0% |  |
+| E06 | semantic | PASS | 1089.5 | 148 | 67.8% |  |
+| E09 | long_term | PASS | 1806.2 | 727 | 0.0% |  |
 | E10 | short_term | PASS | 0.3 | 195 | 0.0% |  |
-| E02 | long_term | PASS | 3134.2 | 1458 | 0.0% |  |
-| E03 | long_term | PASS | 1869.8 | 1478 | 0.0% |  |
-| E04 | episodic | PASS | 712.4 | 615 | 0.0% |  |
-| E05 | episodic | PASS | 1285.0 | 636 | 0.0% |  |
-| E07 | mixed | PASS | 2126.6 | 485 | 14.2% |  |
-| E11 | semantic | PASS | 358.7 | 146 | 74.2% |  |
-| E08 | long_term | PASS | 3586.2 | 1435 | 0.0% |  |
+| E02 | long_term | PASS | 1937.3 | 1458 | 0.0% |  |
+| E03 | long_term | PASS | 1941.2 | 1478 | 0.0% |  |
+| E04 | episodic | PASS | 1211.9 | 615 | 0.0% |  |
+| E05 | episodic | PASS | 1427.5 | 636 | 0.0% |  |
+| E07 | mixed | PASS | 2528.0 | 485 | 14.2% |  |
+| E11 | semantic | PASS | 275.5 | 146 | 74.2% |  |
+| E08 | long_term | PASS | 3111.4 | 1435 | 0.0% |  |
 
 ## Evidence excerpts
 
@@ -50,11 +50,11 @@
 
 ### E04 - episodic
 
-`EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Minh dang chuan bi tu on lai phan async cua Python vi tuan sau co bai kiem tra nho, ma minh thi hoc kieu de vao dau lai de troi ra lam neu chi doc chu suong. Neu lat nua ban phai g EPISODE: Minh dang viet mot cai note tong ket ngan de tuan sau trinh bay cho ca nhom nghe ve cach minh phan biet giua viec ca nhan va viec o cong ty, vi may ban trong nhom hay bi lan lon. D EPISODE: Minh dang lam kiem ke lai mo hinh cac du an backend de bao cao, ma minh rat so cai vu bi gan nham du an cua nguoi khac vao ho so cua minh, chuyen do tung xay ra roi nen lan nay min EPISODE: Minh dang ngoi mot minh viet cho xong cai ham`
+`EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Toi nay minh muon viet cho tron ven cai retry payment ma vua dung so thich stack ca nhan cua minh, vua theo dung policy thanh toan chinh thuc, vua tranh dam lai dung cai su co asyn EPISODE: Minh dang setup lai moi truong dev cho mot buoi ngoi code mot minh cuoi tuan nay, kieu khong co ai chung nhom, chi lam project rieng cua minh cho vui thoi. Truoc khi minh chon temp EPISODE: Tuan nay minh moi bi keo vao cai du an ben cong ty va sep hoi lien tuc ve chuyen chuan hoa backend, ma minh thi hoi mo ho vi truoc gio minh xai nhieu thu khac nhau cho project rien EPISODE: Sang mai minh phai hop review tien do voi men`
 
 ### E05 - episodic
 
-`EPISODE: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline. EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Backend cua BLUEBIRD-42 bat buoc dung stack gi? EPISODE: Minh dang chuan bi tu on lai phan async cua Python vi tuan sau co bai kiem tra nho, ma minh thi hoc kieu de vao dau lai de troi ra lam neu chi doc chu suong. Neu lat nua ban phai g EPISODE: Minh dang viet mot cai note tong ket ngan de tuan sau trinh bay cho ca nhom nghe ve cach minh phan biet giua viec ca nhan va viec o cong ty, vi may ban trong nhom hay bi lan lon. D EPISODE: Minh dang lam kiem ke lai mo hinh cac du an backend de`
+`EPISODE: Toi dang hoc async/await va hay nham coroutine voi Task. Neu sau nay gap chu de nay, hay giai thich bang timeline. EPISODE: Hay kiem tra connection pool, lifecycle cua client va concurrency. EPISODE: Toi nay minh muon viet cho tron ven cai retry payment ma vua dung so thich stack ca nhan cua minh, vua theo dung policy thanh toan chinh thuc, vua tranh dam lai dung cai su co asyn EPISODE: Minh dang setup lai moi truong dev cho mot buoi ngoi code mot minh cuoi tuan nay, kieu khong co ai chung nhom, chi lam project rieng cua minh cho vui thoi. Truoc khi minh chon temp EPISODE: Tuan nay minh moi bi keo vao cai du an ben cong ty va sep hoi lien tuc ve chuyen chuan hoa backend, ma minh thi`
 
 ### E07 - mixed
 
